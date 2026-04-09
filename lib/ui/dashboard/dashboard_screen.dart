@@ -6,6 +6,7 @@ import 'package:vaultmesh_flutter_x/ui/api_keys/api_keys_screen.dart';
 import 'package:vaultmesh_flutter_x/ui/links/links_screen.dart';
 import 'package:vaultmesh_flutter_x/ui/other_secrets/other_secrets_screen.dart';
 import 'package:vaultmesh_flutter_x/ui/settings/settings_screen.dart';
+import 'package:vaultmesh_flutter_x/ui/sync/sync_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -33,6 +34,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
         title: const Text('VaultMesh Dashboard'),
         actions: [
           IconButton(
+            icon: const Icon(Icons.sync),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SyncScreen()),
+              );
+            },
+          ),          IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
               Navigator.push(
