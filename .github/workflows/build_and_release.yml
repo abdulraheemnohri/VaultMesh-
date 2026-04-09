@@ -53,6 +53,15 @@ jobs:
           flutter config --enable-macos
           flutter config --enable-windows
 
+      - name: Flutter Doctor
+        run: flutter doctor -v
+
+      - name: Install Linux dependencies
+        if: matrix.target == 'linux'
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y clang cmake ninja-build libgtk-3-dev
+
       - name: Build for Android
         if: matrix.target == 'android'
         run: |
