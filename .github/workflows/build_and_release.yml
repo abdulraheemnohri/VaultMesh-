@@ -34,9 +34,11 @@ jobs:
             artifact_path: build/windows/runner/Release/
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: subosito/flutter-action@v2
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.13.0'
           channel: 'stable'
@@ -60,7 +62,7 @@ jobs:
         if: matrix.target == 'linux'
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y clang cmake ninja-build libgtk-3-dev
+          sudo apt-get install -y clang cmake ninja-build libgtk-3-dev liblzma-dev libstdc++-12-dev
 
       - name: Build for Android
         if: matrix.target == 'android'
@@ -97,27 +99,32 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - name: Download Android artifacts
+        uses: actions/download-artifact@v4
         with:
           name: android
           path: releases/android
 
-      - uses: actions/download-artifact@v4
+      - name: Download Linux artifacts
+        uses: actions/download-artifact@v4
         with:
           name: linux
           path: releases/linux
 
-      - uses: actions/download-artifact@v4
+      - name: Download iOS artifacts
+        uses: actions/download-artifact@v4
         with:
           name: ios
           path: releases/ios
 
-      - uses: actions/download-artifact@v4
+      - name: Download macOS artifacts
+        uses: actions/download-artifact@v4
         with:
           name: macos
           path: releases/macos
 
-      - uses: actions/download-artifact@v4
+      - name: Download Windows artifacts
+        uses: actions/download-artifact@v4
         with:
           name: windows
           path: releases/windows
