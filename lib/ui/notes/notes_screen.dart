@@ -8,6 +8,10 @@ class NotesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Notes Vault')),
       body: const Center(child: Text('Manage your notes here.')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

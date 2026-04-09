@@ -8,6 +8,10 @@ class DocumentsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Documents Vault')),
       body: const Center(child: Text('Manage your documents here.')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

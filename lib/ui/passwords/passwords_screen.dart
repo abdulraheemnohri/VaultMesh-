@@ -8,6 +8,10 @@ class PasswordsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Passwords Vault')),
       body: const Center(child: Text('Manage your passwords here.')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

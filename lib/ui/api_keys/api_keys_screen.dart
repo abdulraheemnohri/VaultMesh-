@@ -8,6 +8,9 @@ class ApiKeysScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('API Keys Vault')),
       body: const Center(child: Text('Manage your API keys here.')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
-}

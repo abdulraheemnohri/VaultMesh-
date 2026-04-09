@@ -8,5 +8,9 @@ class OtherSecretsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Other Secrets Vault')),
       body: const Center(child: Text('Manage your other secrets here.')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }

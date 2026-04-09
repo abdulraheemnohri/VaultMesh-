@@ -8,5 +8,9 @@ class LinksScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Links Vault')),
       body: const Center(child: Text('Manage your links here.')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
