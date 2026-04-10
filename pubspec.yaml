@@ -1,0 +1,48 @@
+name: vaultmesh_flutter_x
+description: "A secure offline vault for passwords, notes, and secrets with local network sync."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.11.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_riverpod: ^2.4.9
+  drift: ^2.14.1
+  sqlite3_flutter_libs: ^0.5.18
+  cryptography: ^2.5.0
+  flutter_secure_storage: ^9.0.0
+  local_auth: ^2.1.8
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  flutter_jailbreak_detection: ^1.1.0
+  intl: ^0.18.1
+  file_picker: ^6.1.1
+  share_plus: ^7.2.2
+  flutter_animate: ^4.2.0
+  sqflite: ^2.3.0
+
+  # Sync and Discovery
+  nsd: ^1.1.2
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^3.5.2
+  shelf: ^1.4.1
+  shelf_router: ^1.1.4
+  http: ^1.1.0
+  uuid: ^4.2.2
+  network_info_plus: ^5.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  drift_dev: ^2.14.1
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
